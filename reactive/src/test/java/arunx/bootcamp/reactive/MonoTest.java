@@ -101,7 +101,6 @@ public class MonoTest {
 		
 	}
 	
-	
 	public void monoDoOnMethods() {
 		log.info("===START monoDoOnMethods {}", "=====================================");
 		String name = "Arun Rasmey";
