@@ -1,10 +1,10 @@
-package arunx.bootcamp.springboot2;
+package com.arunx.boxapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AppTest {
+class BoxAppTests {
 
 	@Test
 	void contextLoads() {

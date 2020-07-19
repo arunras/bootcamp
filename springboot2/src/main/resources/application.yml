@@ -1,3 +1,51 @@
 server:
+  port: 8000
   error:
-    include-stacktrace: always	
+    include-stacktrace: always
+
+#==MySQL==
+spring:
+  datasource:
+    #url: jdbc:mysql://localhost:3306/arunbox?useSSL=false
+    url: jdbc:mysql://localhost/arunbox?serverTimezone=UTC
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+#    properties:
+#      hibernate:
+#        format_sql: false
+#      show-sql: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          describtor:
+            sql:
+              BasicBinder: TRACE
+
+#==endMySQL==
+
+#==ACTUATOR====
+info:
+  app: ArunBox
+  website: box.com
+  github: https://github.com
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, matrics, prometheus
+        #include: "*"
+  endpoint:
+    health:
+      show-details: when-authorized
+       
+#==endACTUATOR====
+
+
